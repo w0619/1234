@@ -1,26 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>won' factory</title>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('#nav a').smoothScroll({
+        easing: 'swing'
+    });
+});
+</script>
+<style type="text/css">
+#nav{position:fixed; width:100%; top:0; border-bottom:1px solid #ddd; background:#fff;}
+#nav ul{margin:0;padding:0; list-style:none;}
+#nav ul li{padding:10px; border-left:1px solid #ddd;}
+#nav ul li:last-child{border-right:1px solid #ddd;}
+html, body{height:100%;}
+.page{height:100%;}
+.page .container{padding-top:50px;}
+#page1{background-color:aqua}
+#page2{background-color:fuchsia}
+#page3{background-color:lime}
+</style>
 </head>
 <body>
-  <h1><a href="index.html">won's factory</a></h1>
-  <div id="grid">
-    <ol>
-        <li><a href="0index.html" class="saw" target="_blank">Index</li>
-        <li><a href="1main.html" class="saw" target="_blank">Main</li>
-        <li><a href="2maranata.html" target="_blank">마라나타</li>
-        <li><a href="3car.html" target="_blank">자동차</li>
-    </ol>
-     <div id="article">
-          <h2>css</h2>
-          <h2>자동차 이야기</h2>
-          <br>안녕하세요.<strong>
-          <br>won,s Factory </strong>입니다.
-      </div>
-  </div>
+
+<div id="nav">
+    <div class="container">
+        <ul class="d-flex">
+            <li><a href="#about">회사 소개</a></li>
+            <li><a href="#portfolio">포트폴리오</a></li>
+            <li><a href="#contact">연락처</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="page1" class="page">
+    <a id="about" class="smooth"></a>
+    <div class="container">
+        회사소개입니다
+    </div>
+</div>
+
+<div id="page2" class="page">
+    <a id="portfolio" class="smooth"></a>
+    <div class="container">
+        포트폴리오입니다
+    </div>
+</div>
+
+<div id="page3" class="page">
+    <a id="contact" class="smooth"></a>
+    <div class="container">
+        연락주세요<br>
+        <a href="http://bartnet.co.kr" target="_blank">Bartnet.co.kr</a>
+    </div>
+</div>
+
+
 </body>
 </html>
-
